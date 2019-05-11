@@ -106,7 +106,7 @@ If you want to help, you are free to clone or branch the project as long as you 
 5. Keep the code fast and lightweight ie not 500 lines of repetitive slow code that can easily compacted into 10 lines.
 6. Try to avoid spamming the user, (Adding a verbose function #soon).
 
-These are the 6 rules to follow try your best to follow them, and have a pleasant bug-free coding experience.
+These are the 6 rules, try your best to follow them, and have a pleasant bug-free coding experience.
 
 NOTE: if you are finished with your addition please tag your branch with "Ready" and create a pull request, I will add the code in a way that is compliant with my personal formatting rules and give proper credit, after I have done that i will reject the pull request so you can continue with development.
 
