@@ -1,0 +1,166 @@
+#!/bin/bash
+
+# OK I'm gonna make it clear this is NOT a complete package manager. Instead this will use the sudo apt command.
+# This does not mean that it is useless, for example: you do not need to type sudo yafpm instead you can type yafpm and it will still work.
+
+Version=0.1																		#Indication to the user that this is beta.
+
+Notify()																		#Notifies the user about yafpm.
+{
+	echo "Yet Another Fucking Package Manager V$Version"
+	echo "starting..."
+	echo "started YAFPM."
+}
+
+Help()																			#prints help then exits.	Please help me find a way to improve this.
+{
+	echo "┌────────────────────────────────────────────────────────────────────┐"
+	echo "│ YAFPM Help                                                         │"
+	echo "├────────────────────────────────────────────────────────────────────┤"
+	echo "│ This is the included documentation no manual (yet) Sorry :(.       │"
+	echo "│ YAFPM or Yet Another Fucking Package Manager is exactly what       │"
+	echo "│ it claims to be it is yet another package manager and the          │"
+	echo "│ name also describes the feeling you get when you need to           |"
+	echo "| install it 'Yet Another Fucking Package Manager?!!!!!!!!!!'.       │"
+	echo "│ The project started more as a joke as i was looking for a          │"
+	echo "│ way to make apt sudoless 'if that is a word' and the name          |"
+	echo "│ was the actual joke as there are so many package managers in       │"
+	echo "│ the linux world that keeping track of them is impossible.          │"
+	echo "│ Anyways the project is suposed to work if it doesn't not my        │"
+	echo "│ fault. -Scraft161                                                  │"
+	echo "├────────────────────────────────────────────────────────────────────┤"
+	echo "│ Arguments:                                                         │"
+	echo "│ -h, help                      Prints this message and exits.       │"
+	echo "│ -s, -g, install, grab        Installs the specified package.       │"
+	echo "│ -l, list                     Lists available packages with the     │"
+	echo "│                              specified name.                       │"
+	echo "│ -r, -u remove, uninstall     Removes the specified package.        │"
+	echo "│ -U, update                   Updates the specified package.        │"
+	echo "│ -UG, upgrade                 Upgrades the specified package.       │"
+	echo "│ -ar, -p, autoremove, purge   removes packages wich are no longer   │"
+	echo "│                              needed.                               │"
+	echo "│ -e, edit, edit-sources       opens the sources.list files in your  │"
+	echo "│                              prefered text editor.                 │"
+	echo "└────────────────────────────────────────────────────────────────────┘"
+}
+
+Install()																		#installs packages
+{
+	Notify
+	sudo apt install $Package
+}
+
+List()																			#lists packages
+{
+	Notify
+	sudo apt list $Package
+}
+
+Remove()																		#removes packages
+{
+	Notify
+	sudo apt remove $Package
+}
+
+Update()																		#update packages
+{
+	Notify
+	sudo apt update $Package
+}
+
+Upgrade()																		#upgrades packages
+{
+	Notify
+	sudo apt upgrade $Package
+}
+
+AutoRem()																		#removes not-required packages
+{
+	Notify
+	sudo apt autoremove
+}
+
+Edit()																			#allows the user to edit the sources
+{
+	Notify
+	sudo apt edit-sources
+}
+
+#Actual code--------------------------------------------------------------------
+Parm1=$1
+Parm2=$2
+	
+case $Parm1 in																	#looks at the given argument and calls function based on that
+	-h)
+		Help
+		;;
+	help)
+		Help
+		;;
+	-s)
+		Install
+		;;
+	-g)
+		Install
+		;;
+	install)
+		Install
+		;;
+	grab)
+		Install
+		;;
+	-l)
+		List
+		;;
+	list)
+		List
+		;;
+	-r)
+		Remove
+		;;
+	-u)
+		Remove
+		;;
+	remove)
+		Remove
+		;;
+	uninstall)
+		Remove
+		;;
+	-U)
+		Update
+		;;
+	update)
+		Update
+		;;
+	-UG)
+		Upgrade
+		;;
+	upgrade)
+		Upgrade
+		;;
+	-ar)
+		AutoRem
+		;;
+	autoremove)
+		AutoRem
+		;;
+	-p)
+		AutoRem
+		;;
+	purge)
+		AutoRem
+		;;
+	-e)
+		Edit
+		;;
+	edit)
+		Edit
+		;;
+	edit-sources)
+		Edit
+		;;
+	*)
+		echo "Unknown command // No arguments Use yafpm help for help"
+		;;
+esac
