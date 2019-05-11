@@ -37,6 +37,7 @@ yafpm grab $PackageName
 yafpm -g $PackageName
 ```
 As you can tell there are many ways to install a package
+NOTE: $PackageName is supposed to be replaced by the name of the package.
 
 Removing a package can be done with.
 ```
@@ -46,14 +47,14 @@ yafpm uninstall $PackageName
 yafpm -u $PackageName
 ```
 Just as there are many ways to install a package there are many to remove one.
-Also note that the -u argument uses a LOWERCASE u.
+NOTE: The -u argument uses a LOWERCASE u.
 
 Finding packages can be done using.
 ```
 yafpm list $PackageName
 yafpm -l $PackageName
 ```
-Note that it will find packages just like apt does.
+NOTE: it will find packages just like apt.
 
 Updating packages is done using.
 ```
@@ -61,14 +62,14 @@ yafpm update "$PackageName"
 yafpm -U "$PackageName"
 ```
 Note that the name of the package is not required and that it will update all packages if no name is given.
-Also note that the -U argument uses an UPPERCASE u.
+NOTE: the -U argument uses an UPPERCASE u.
 
 Upgrading is done with.
 ```
 yafpm upgrade "$PackageName"
 yafpm -UG "$PackageName"
 ```
-Note that upgrading uses BOTH UPPERCASE u and UPPERCASE g if the -UG argument is used.
+NOTE: upgrading uses BOTH UPPERCASE u and UPPERCASE g if the -UG argument is used.
 
 If you ever want to remove packages that are not in use by other programs you can use.
 ```
@@ -77,7 +78,7 @@ yafpm -ar
 yafpm purge
 yafpm -p
 ```
-Note ("No notes yet...")
+NOTE: ("No notes yet...")
 
 And editing the sources is done with.
 ```
@@ -85,7 +86,7 @@ yafpm edit-sources
 yafpm edit
 yafpm -e
 ```
-Note that this is exactly like in apt.
+NOTE: this is exactly like apt.
 
 ## History
 yafpm started out as a joke to mock on all the different package managers and the name would describe what most poeple would think if they had to install this for one package "Yet Another Fucking Package Manager".
