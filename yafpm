@@ -14,6 +14,12 @@ Notify()																		#Notifies the user about yafpm.
 
 Help()																			#prints help then exits.	Please help me find a way to improve this.
 {
+	cat << EOF
+	test
+	test123
+	test test
+	EOF
+
 	echo "┌────────────────────────────────────────────────────────────────────┐"
 	echo "│ YAFPM Help                                                         │"
 	echo "├────────────────────────────────────────────────────────────────────┤"
