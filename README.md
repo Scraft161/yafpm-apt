@@ -14,14 +14,17 @@ sudo cp ./~/Downloads/yafpm-apt /usr/bin
 then type the sudo password and you have succesfully installed yafpm
 
 ### Step 2
-open the help menu by typing.
+Open the help menu by typing.
 ```
 yafpm -h
 ```
-OR
+Also
 ```
 yafpm help
+yafpm info
+yafpm -i
 ```
+will have the same effect.
 Note that there is no manual entry so typing
 ```
 man yafpm
