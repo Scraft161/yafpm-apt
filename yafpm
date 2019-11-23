@@ -97,6 +97,12 @@ case $Parm1 in																	#looks at the given argument and calls function b
 	help)
 		Help
 		;;
+	info)
+		Help
+		;;
+	-i)
+		Help
+		;;
 	-s)
 		Install
 		;;

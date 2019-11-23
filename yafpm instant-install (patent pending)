@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#yafpm installer
+
+echo "Installing YAFPM, get the root password ready"
+sudo cp "yafpm" "/usr/bin"	#copies the yafpm shell script to the rest off the bash commands
+echo "Done"
