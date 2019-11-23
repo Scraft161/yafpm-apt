@@ -103,12 +103,12 @@ If you want to help, you are free to clone or branch the project as long as you 
 2. Keep your code clean and easy to read.
 3. Only pull request if you feel your code is "production ready" ie no majour bugs.
 4. Use comments to indicate what code does.
-5. Keep the code fast and lightweight ie not 500 lines of repetitive slow code that can easily compacted into 10 lines.
+5. Keep the code fast and lightweight ie not 500 lines of repetitive slow code that can easily be compacted into 10 lines.
 6. Try to avoid spamming the user, (Adding a verbose function #soon).
 
 These are the 6 rules, try your best to follow them, and have a pleasant bug-free coding experience.
 
-NOTE: if you are finished with your addition please tag your branch with "Ready" and create a pull request, I will add the code in a way that is compliant with my personal formatting rules and give proper credit, after I have done that i will reject the pull request so you can continue with development.
+NOTE: if you are finished with your addition please tag your branch with "Ready" and create a pull request, I will review the code and make changes if nessecary.
 
 If you want to fork the project you are free to do so as long as a link to the original project is provided.
 You do not have to credit me by putting my username in the README.md but you can if you want.
